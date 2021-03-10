@@ -27,7 +27,7 @@ class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<MainAdapter.Cus
         //val videoTitle = videoTitles[position]
         val video = homeFeed.videos[position]
         holder.video_title.text = video.name
-        holder.channel_name.text = video.channel.name
+        holder.channel_name.text = video.channel.name + " : " + "20K Views\n4 days ago"
 
         val thumbnailImageView = holder.thumb_nail
         Picasso.with(holder.itemView.context).load(video.imageUrl).into(
