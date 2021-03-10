@@ -1,5 +1,6 @@
 package com.example.pone
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,6 +51,14 @@ class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<MainAdapter.Cus
         val thumb_nail: ImageView = itemView.findViewById(R.id.video_thumbnail)
 
         val channel_image: ImageView = itemView.findViewById(R.id.channel_image)
+
+        init {
+            itemView.setOnClickListener {
+
+                val intent = Intent(itemView.context, CourseDetailActivity::class.java)
+                itemView.context.startActivity(intent)
+            }
+        }
     }
 
 }
